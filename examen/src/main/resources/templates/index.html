@@ -1,86 +1,194 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml">
-    <head th:replace="~{../layout/plantilla :: head}">
-        <title>Farmacia</title>        
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 
-    </head>
-    <body>
-        <header th:replace="~{../layout/plantilla :: header}"/>
+<head th:replace="~{../layout/plantilla :: head}">
+    <title>Farmacia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1,
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        p {
+            margin: 1em 0;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #007bff;
+            color: white;
+            position: relative;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header th:replace="~{../layout/plantilla :: header}" />
+    <div class="container">
         <h1>Bienvenidos a Farmacia</h1>
         <p>
-
-            **Farmacia: Tu Aliado en Salud y Bienestar**
-            
-            En "Farmacia", nos dedicamos a cuidar tu salud y bienestar, ofreciéndote una amplia gama de productos y servicios farmacéuticos de la más alta calidad. Nuestro equipo de profesionales altamente capacitados está siempre disponible para brindarte asesoramiento personalizado y resolver todas tus dudas.
-            
-            **¿Qué nos distingue?**
-            
-            * **Variedad de productos:**
-                * Contamos con un extenso surtido de medicamentos de prescripción y de venta libre, productos de cuidado personal, artículos de higiene, vitaminas y suplementos, y mucho más.
-                * Trabajamos con las mejores marcas del mercado para garantizar la eficacia y seguridad de nuestros productos.
-            * **Atención personalizada:**
-                * Nuestros farmacéuticos están comprometidos a brindarte una atención cercana y profesional, resolviendo tus inquietudes y ofreciéndote recomendaciones adaptadas a tus necesidades.
-                * Nos preocupamos por tu bienestar, por lo que te ofrecemos servicios de seguimiento y control de medicamentos.
-            * **Servicios adicionales:**
-                * En "Farmacia", nos esforzamos por ofrecerte soluciones integrales para tu salud. Por ello, contamos con servicios como:
-                    * Toma de presión arterial.
-                    * Control de glucosa.
-                    * Aplicación de inyecciones.
-                    * entre otros.
-            * **Compromiso con la comunidad:**
-                * Somos una farmacia comprometida con el bienestar de nuestra comunidad. Participamos activamente en campañas de salud y promovemos hábitos de vida saludables.
-                * Estamos continuamente actualizando la lista de servicios y productos, para poder proveer la mejor experiencia de servicio a nuestros clientes.
-            
-            **Visítanos y descubre todo lo que "Farmacia" tiene para ofrecerte.**
-            
-            Y nuestro producto estrella a continuacion:</p>
-        <h2>Alka-AD</h2>
-        <p>La "Alka-AD" es un medicamento antidiarreico de venta libre fabricado por Bayer. Contiene el ingrediente activo loperamida, que funciona al disminuir la velocidad del movimiento de los intestinos. A continuación, se muestra información importante sobre Alka-AD:
-
-            **Usos:**
-            
-            * Tratamiento sintomático de la diarrea aguda y crónica.
-            * Alivio de la diarrea del viajero.
-            
-            **Formas de dosificación:**
-            
-            * Tabletas.
-            * Cápsulas.
-            
-            **Información importante de seguridad:**
-            
-            * No se recomienda su uso en niños menores de 2 años.
-            * Consulte a un médico antes de usarlo en niños de 2 a 12 años.
-            * No use Alka-AD si tiene diarrea con fiebre alta o sangre en las heces.
-            * Consulte a un médico antes de usar Alka-AD si está embarazada o amamantando.
-            * Alka-AD puede causar estreñimiento.
-            * No consumir este producto si la diarrea es acompañada de fiebre mayor de 38°C o si las deposiciones van acompañadas de sangre y/o mucosidad.
-            * Terapia de rehidratación oral es necesaria en todo proceso de diarrea.
-            
-            **Efectos secundarios:**
-            
-            * Estreñimiento.
-            * Náuseas.
-            * Vómitos.
-            * Dolor de estómago.
-            * Mareos.
-            
-            **Interacciones con otros medicamentos:**
-            
-            * Alka-AD puede interactuar con otros medicamentos, incluidos los inhibidores de la monoaminooxidasa (IMAO) y los antibióticos.
-            
-            **Advertencias:**
-            
-            * Siga las instrucciones de la etiqueta al tomar Alka-AD.
-            * No tome más Alka-AD de lo recomendado.
-            * Consulte a un médico si la diarrea empeora o no mejora en 48 horas.
-            * El uso en niños de 2 a 12 debe permanecer exclusivamente bajo el criterio del médico tratante.
-            
-        
-            Es importante leer y seguir las instrucciones en la etiqueta del producto y consultar con un proveedor de atención médica si tiene alguna pregunta o inquietud.
+            <strong>Farmacia: Tu Aliado en Salud y Bienestar</strong>
+        </p>
+        <p>
+            En "Farmacia", nos dedicamos a cuidar tu salud y bienestar, ofreciéndote una amplia gama de productos y
+            servicios farmacéuticos de la más alta calidad. Nuestro equipo de profesionales altamente capacitados está
+            siempre disponible para brindarte asesoramiento personalizado y resolver todas tus dudas.
+        </p>
+        <h2>¿Qué nos distingue?</h2>
+        <ul>
+            <li>
+                <strong>Variedad de productos:</strong>
+                <ul>
+                    <li>Contamos con un extenso surtido de medicamentos de prescripción y de venta libre, productos de
+                        cuidado personal, artículos de higiene, vitaminas y suplementos, y mucho más.</li>
+                    <li>Trabajamos con las mejores marcas del mercado para garantizar la eficacia y seguridad de
+                        nuestros productos.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Atención personalizada:</strong>
+                <ul>
+                    <li>Nuestros farmacéuticos están comprometidos a brindarte una atención cercana y profesional,
+                        resolviendo tus inquietudes y ofreciéndote recomendaciones adaptadas a tus necesidades.</li>
+                    <li>Nos preocupamos por tu bienestar, por lo que te ofrecemos servicios de seguimiento y control de
+                        medicamentos.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Servicios adicionales:</strong>
+                <ul>
+                    <li>En "Farmacia", nos esforzamos por ofrecerte soluciones integrales para tu salud. Por ello,
+                        contamos con servicios como:</li>
+                    <ul>
+                        <li>Toma de presión arterial.</li>
+                        <li>Control de glucosa.</li>
+                        <li>Aplicación de inyecciones.</li>
+                        <li>entre otros.</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <strong>Compromiso con la comunidad:</strong>
+                <ul>
+                    <li>Somos una farmacia comprometida con el bienestar de nuestra comunidad. Participamos activamente
+                        en campañas de salud y promovemos hábitos de vida saludables.</li>
+                    <li>Estamos continuamente actualizando la lista de servicios y productos, para poder proveer la
+                        mejor experiencia de servicio a nuestros clientes.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <strong>Visítanos y descubre todo lo que "Farmacia" tiene para ofrecerte.</strong>
+        </p>
+        <p>
+            Y nuestro producto estrella a continuación:
+        </p>
+        <div class="product">
+            <h2>Alka-AD</h2>
+            <p>
+                La "Alka-AD" es un medicamento antidiarreico de venta libre fabricado por Bayer. Contiene el ingrediente
+                activo loperamida, que funciona al disminuir la velocidad del movimiento de los intestinos. A
+                continuación, se muestra información importante sobre Alka-AD:
             </p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/6zXi5PiTdcw?si=x7mW-mpjmaducS2j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <footer th:replace="~{../layout/plantilla :: footer}"/>
-    </body>
+            <h3>Usos:</h3>
+            <ul>
+                <li>Tratamiento sintomático de la diarrea aguda y crónica.</li>
+                <li>Alivio de la diarrea del viajero.</li>
+            </ul>
+            <h3>Formas de dosificación:</h3>
+            <ul>
+                <li>Tabletas.</li>
+                <li>Cápsulas.</li>
+            </ul>
+            <h3>Información importante de seguridad:</h3>
+            <ul>
+                <li>No se recomienda su uso en niños menores de 2 años.</li>
+                <li>Consulte a un médico antes de usarlo en niños de 2 a 12 años.</li>
+                <li>No use Alka-AD si tiene diarrea con fiebre alta o sangre en las heces.</li>
+                <li>Consulte a un médico antes de usar Alka-AD si está embarazada o amamantando.</li>
+                <li>Alka-AD puede causar estreñimiento.</li>
+                <li>No consumir este producto si la diarrea es acompañada de fiebre mayor de 38°C o si las deposiciones
+                    van acompañadas de sangre y/o mucosidad.</li>
+                <li>Terapia de rehidratación oral es necesaria en todo proceso de diarrea.</li>
+            </ul>
+            <h3>Efectos secundarios:</h3>
+            <ul>
+                <li>Estreñimiento.</li>
+                <li>Náuseas.</li>
+                <li>Vómitos.</li>
+                <li>Dolor de estómago.</li>
+                <li>Mareos.</li>
+            </ul>
+            <h3>Interacciones con otros medicamentos:</h3>
+            <ul>
+                <li>Alka-AD puede interactuar con otros medicamentos, incluidos los inhibidores de la monoaminooxidasa
+                    (IMAO) y los antibióticos.</li>
+            </ul>
+            <h3>Advertencias:</h3>
+            <ul>
+                <li>Siga las instrucciones de la etiqueta al tomar Alka-AD.</li>
+                <li>No tome más Alka-AD de lo recomendado.</li>
+                <li>Consulte a un médico si la diarrea empeora o no mejora en 48 horas.</li>
+                <li>El uso en niños de 2 a 12 debe permanecer exclusivamente bajo el criterio del médico tratante.</li>
+            </ul>
+            <p>
+                Es importante leer y seguir las instrucciones en la etiqueta del producto y consultar con un proveedor
+                de atención médica si tiene alguna pregunta o inquietud.
+            </p>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6zXi5PiTdcw?si=x7mW-mpjmaducS2j"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <footer th:replace="~{../layout/plantilla :: footer}" />
+</body>
+
 </html>
