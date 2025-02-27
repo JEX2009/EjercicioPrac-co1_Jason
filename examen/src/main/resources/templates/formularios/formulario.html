@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <head th:replace="~{../layout/plantilla :: head}"></head>
+    <title>Sugerencias y Quejas</title>
+</head>
+
+<body>
+    <header th:replace="~{../layout/plantilla :: header}"/>
+    <h1>Sugerencias y Quejas</h1>
+    <form th:action="@{/enviar-feedback}" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required/>
+        </div>
+        <div>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required/>
+        </div>
+        <div>
+            <label for="tipo">Tipo de Feedback:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="queja">Queja</option>
+            </select>
+        </div>
+        <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+        <footer th:replace="~{../layout/plantilla :: footer}"/>
+    </form>
+</body>
+</html>
